@@ -1,5 +1,8 @@
-/* Objetivo:    Coletar informacoes do Sistema Operacional e de Rede;
- * 				executar um comando de ping. 
+/* Objetivo:    Coletar e exibir os seguintes itens: informações do 
+ 				Sistema Operacional, Informações de rede (Apenas IPv4)
+ 				e coletar a media do ping. Tanto as informacoes de rede como
+ 				o ping deverao receber o nome do SO coletado anteriormente 
+ 				para assim entao, prosseguir com o codigo de acordo com cada SO.
 
                 Este codigo fonte sera salvo no arquivo RedesController.java
                 Exemplificar um programa Java

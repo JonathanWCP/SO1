@@ -1,14 +1,14 @@
-/*Objetivo:     Um banco deve controlar Saques e Depósitos.
-				O sistema pode permitir um Saque e um Depósito
-				Simultâneos, mas nunca 2 Saques ou 2 Depósitos
-				Simultâneos.
-				Para calcular a transação (Saque ou Depósito), o método deve
-				receber o código da conta, o saldo da conta e o valor a ser
+/*Objetivo:     Um banco deve controlar Saques e Depositos.
+				O sistema pode permitir um Saque e um Deposito
+				Simultaneos, mas nunca 2 Saques ou 2 Depositos
+				Simultaneos.
+				Para calcular a transacao (Saque ou Deposito), o metodo deve
+				receber o codigo da conta, o saldo da conta e o valor a ser
 				transacionado.
 				Deve-se montar um sistema que deve considerar que 20
-				transações simultâneas serão enviadas ao sistema
-				(aleatoriamente essas transações podem ser qualquer uma das
-				opções) e tratar todas as transações, de acordo com as regras
+				transacoes simultaneas serao enviadas ao sistema
+				(aleatoriamente essas transacoes podem ser qualquer uma das
+				opcoes) e tratar todas as transacoes, de acordo com as regras
 				acima.
                 
 				Este codigo fonte sera salvo no arquivo Bank.java

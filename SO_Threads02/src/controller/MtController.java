@@ -1,3 +1,13 @@
+/*Objetivo:  	Fazer uma aplicação que insira números
+				aleatórios em uma matriz 3 x 5 e tenha 3
+				Threads, onde cada Thread calcula a soma dos
+				valores de cada linha, imprimindo a identificação
+				da linha e o resultado da soma.
+                
+                Este codigo fonte sera salvo no arquivo ToadRace.java
+   Programador: Jonathan Willian Castro Pinheiro
+   Data:        22-04-2019
+*/
 package controller;
 
 import java.util.Random;

@@ -2,8 +2,8 @@
  				separados; {apenas 1 pessoa} pode cruzar a porta por vez.
  				Cada corredor tem 200 metros, e cada pessoa anda de
  				4 a 6 m/s. Cada pessoa leva de 1 a 2 segundos
-				para abrir e cruzar a porta. Faça uma
-				aplicação em java que simule essa situação. 
+				para abrir e cruzar a porta. Faca uma
+				aplicacao em java que simule essa situacao. 
                 
                 Este codigo fonte sera salvo no arquivo Main.java
    Programador: Jonathan Willian Castro Pinheiro

@@ -1,3 +1,9 @@
+/*Objetivo:     Exemplo de Thread usada pelo professor em aula.
+                
+				Este codigo fonte sera salvo no arquivo Exemplo1.java
+   Programador: Jonathan Willian Castro Pinheiro
+   Data:        22-04-2019
+*/
 package controller;
 
 public class Exemplo1 extends Thread {

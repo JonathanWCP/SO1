@@ -1,3 +1,10 @@
+/*Objetivo:  	Fazer uma aplicação que rode 5 Threads que
+				cada uma delas imprima no console o seu número
+                
+                Este codigo fonte sera salvo no arquivo ToadRace.java
+   Programador: Jonathan Willian Castro Pinheiro
+   Data:        22-04-2019
+*/
 package controller;
 
 import java.util.Random;

@@ -1,4 +1,9 @@
-/*Objetivo:     ...
+/*Objetivo:     Fazer uma aplicação que simule um cruzamento de carros
+				com 4 direcoes Para tal, usar uma variável sentido,
+				que será alterado pela Thread que controla cada carro com a
+				movimentação do carro. Quando aThread tiver a possibilidade de ser
+				executada, ela deve imprimir em console o sentido que o carro está
+				passando. Só pode passar um carro por vez no cruzamento.
                 
 				Este codigo fonte sera salvo no arquivo Main.java
    Programador: Jonathan Willian Castro Pinheiro
