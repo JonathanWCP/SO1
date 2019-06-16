@@ -1,4 +1,4 @@
-/*Objetivo:     ...
+/*Objetivo:     Metodos para manipular um arquivo
                 
 				Este codigo fonte sera salvo no arquivo Arquivos.java
    Programador: Jonathan Willian Castro Pinheiro
@@ -33,7 +33,7 @@ public class Arquivos implements IArquivosController {
 			FileWriter abre = new FileWriter(arq, existe);
 			PrintWriter escreve = new PrintWriter(abre);
 			escreve.write(texto);
-			escreve.flush(); //corrige e/ou finaliza qualquer apontamento de memoria 
+			escreve.flush(); // corrige e/ou finaliza qualquer apontamento de memoria
 			escreve.close();
 			abre.close();
 		} else {
@@ -41,21 +41,24 @@ public class Arquivos implements IArquivosController {
 		}
 	}
 
-	private String criaTexto() {
+	public String criaTexto() {
 		StringBuffer buffer = new StringBuffer();
-		String linha = JOptionPane.showInputDialog(null, "Digite");
+		String linha = JOptionPane.showInputDialog(null, "Digite (escreva fim para finalizar)");
 		while (!linha.equalsIgnoreCase("fim")) {
 			buffer.append(linha);
 			buffer.append("\n");
 			linha = JOptionPane.showInputDialog(null, "digite");
 		}
+		JOptionPane.showMessageDialog(null, "Arquivo gerado com sucesso!", "Aviso!", JOptionPane.INFORMATION_MESSAGE);
 		return buffer.toString();
+
 	}
 
 	@Override
 	public void leArq(String caminho, String nome) throws IOException {
 		File arq = new File(caminho, nome);
 		if (arq.exists() && arq.isFile()) {
+			System.out.println("Lendo arquivo " + nome + "...");
 			FileInputStream fluxo = new FileInputStream(arq);
 			InputStreamReader leitor = new InputStreamReader(fluxo);
 			BufferedReader buffer = new BufferedReader(leitor);
@@ -68,7 +71,7 @@ public class Arquivos implements IArquivosController {
 			leitor.close();
 			fluxo.close();
 		} else {
-			throw new IOException ("Arquivo invalido");
+			throw new IOException("Arquivo invalido");
 		}
 	}
 
@@ -77,6 +80,7 @@ public class Arquivos implements IArquivosController {
 		Desktop desktop = Desktop.getDesktop();
 		File arq = new File(caminho, nome);
 		if (arq.exists() && arq.isFile()) {
+			System.out.println("Abrindo arquivo " + nome + "...");
 			desktop.open(arq);
 		} else {
 			throw new IOException("Arq. invalido");
@@ -85,8 +89,9 @@ public class Arquivos implements IArquivosController {
 
 	@Override
 	public void leDir(String caminho) throws IOException {
-		File dir = new File(caminho); //percorre o file e cada file sera armazenado no vetor
+		File dir = new File(caminho); // percorre o file e cada file sera armazenado no vetor
 		if (dir.exists() && dir.isDirectory()) {
+			System.out.println("Diretorio -> " + caminho);
 			File[] vetFile = dir.listFiles();
 			for (File f : vetFile) {
 				if (f.isDirectory()) {
@@ -95,8 +100,9 @@ public class Arquivos implements IArquivosController {
 			}
 			for (File f : vetFile) {
 				if (f.isFile()) {
-					//abreArq(f.getAbsolutePath(), f.getName()); abre todos os arquivos no diretorio (nao usar por motivos obvios)
-					System.out.println(f.getName() + "\t\t" + f.getAbsolutePath() );
+					// abreArq(f.getAbsolutePath(), f.getName()); abre todos os arquivos no
+					// diretorio (nao usar por motivos obvios)
+					System.out.println(f.getName() + "\t\t" + f.getAbsolutePath());
 				}
 			}
 		} else {
@@ -105,4 +111,3 @@ public class Arquivos implements IArquivosController {
 	}
 
 }
- 
