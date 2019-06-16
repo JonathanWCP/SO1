@@ -43,11 +43,11 @@ public class Arquivos implements IArquivosController {
 
 	public String criaTexto() {
 		StringBuffer buffer = new StringBuffer();
-		String linha = JOptionPane.showInputDialog(null, "Digite (escreva fim para finalizar)");
+		String linha = JOptionPane.showInputDialog(null, "Digite o conteudo para o arquivo (escreva fim para finalizar)");
 		while (!linha.equalsIgnoreCase("fim")) {
 			buffer.append(linha);
 			buffer.append("\n");
-			linha = JOptionPane.showInputDialog(null, "digite");
+			linha = JOptionPane.showInputDialog(null, "Digite (fim para finalizar)");
 		}
 		JOptionPane.showMessageDialog(null, "Arquivo gerado com sucesso!", "Aviso!", JOptionPane.INFORMATION_MESSAGE);
 		return buffer.toString();
@@ -100,9 +100,8 @@ public class Arquivos implements IArquivosController {
 			}
 			for (File f : vetFile) {
 				if (f.isFile()) {
-					// abreArq(f.getAbsolutePath(), f.getName()); abre todos os arquivos no
-					// diretorio (nao usar por motivos obvios)
-					System.out.println(f.getName() + "\t\t" + f.getAbsolutePath());
+					// abreArq(f.getAbsolutePath(), f.getName()); abre todos os arquivos no diretorio (nao usar por motivos obvios)
+					System.out.println(f.getName() + "\t\t" + f.getAbsolutePath()); //imprime nome do arquivo e o caminho
 				}
 			}
 		} else {

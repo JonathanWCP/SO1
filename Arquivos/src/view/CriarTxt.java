@@ -30,41 +30,32 @@ public class CriarTxt extends JDialog {
 	private JTextField textFieldCaminho;
 
 	public CriarTxt(Texto txt) {
+		setTitle("Criar .txt");
 		this.setModal(true);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 452, 254);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblNomeDoArquivo = new JLabel("Insira um nome para o novo arquivo de texto");
-			lblNomeDoArquivo.setBounds(30, 29, 242, 14);
+			JLabel lblNomeDoArquivo = new JLabel("Insira o nome do arquivo");
+			lblNomeDoArquivo.setBounds(30, 29, 285, 14);
 			contentPanel.add(lblNomeDoArquivo);
 		}
 		{
 			textFieldNome = new JTextField();
-			textFieldNome.setBounds(30, 54, 110, 20);
+			textFieldNome.setBounds(30, 54, 127, 20);
 			contentPanel.add(textFieldNome);
 			textFieldNome.setColumns(10);
 		}
 		{
-			JLabel label = new JLabel("");
-			label.setBounds(30, 86, 46, 14);
-			contentPanel.add(label);
-		}
-		{
-			JLabel label = new JLabel("");
-			label.setBounds(30, 85, 46, 14);
-			contentPanel.add(label);
-		}
-		{
 			JLabel lblEscolhaOCaminho = new JLabel("Escolha o caminho que deseja salvar o arquivo");
-			lblEscolhaOCaminho.setBounds(30, 85, 242, 14);
+			lblEscolhaOCaminho.setBounds(30, 94, 285, 14);
 			contentPanel.add(lblEscolhaOCaminho);
 		}
 		{
 			textFieldCaminho = new JTextField();
-			textFieldCaminho.setBounds(30, 119, 164, 20);
+			textFieldCaminho.setBounds(30, 119, 202, 20);
 			contentPanel.add(textFieldCaminho);
 			textFieldCaminho.setColumns(10);
 		}
@@ -101,7 +92,12 @@ public class CriarTxt extends JDialog {
 				okButton.addActionListener(ok);
 			}
 			{
-				JButton cancelButton = new JButton("Cancel");
+				JButton cancelButton = new JButton("Cancelar");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						dispose();
+					}
+				});
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}

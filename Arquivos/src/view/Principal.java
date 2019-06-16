@@ -51,6 +51,7 @@ public class Principal extends JFrame {
 	 * Create the frame.
 	 */
 	public Principal() {
+		setResizable(false);
 		Acoes ac = new Acoes();
 		setTitle("Manipular Arquivos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,11 +62,11 @@ public class Principal extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblAbrirArq = new JLabel("Abrir Arquivo");
-		lblAbrirArq.setBounds(28, 63, 100, 14);
+		lblAbrirArq.setBounds(27, 39, 100, 14);
 		contentPane.add(lblAbrirArq);
 
 		JButton btnAbrirArq = new JButton("Procurar...");
-		btnAbrirArq.setBounds(28, 88, 100, 23);
+		btnAbrirArq.setBounds(27, 64, 100, 23);
 		contentPane.add(btnAbrirArq);
 
 		ActionListener abrirArq = new ActionListener() {
@@ -85,11 +86,11 @@ public class Principal extends JFrame {
 		btnAbrirArq.addActionListener(abrirArq);
 
 		JLabel lblAbrirDiret = new JLabel("Abrir Diret\u00F3rio");
-		lblAbrirDiret.setBounds(149, 63, 99, 14);
+		lblAbrirDiret.setBounds(148, 39, 99, 14);
 		contentPane.add(lblAbrirDiret);
 
 		JButton btnAbrirDiret = new JButton("Procurar...");
-		btnAbrirDiret.setBounds(149, 88, 99, 23);
+		btnAbrirDiret.setBounds(148, 64, 99, 23);
 		contentPane.add(btnAbrirDiret);
 
 		ActionListener abrirDir = new ActionListener() {
@@ -109,11 +110,11 @@ public class Principal extends JFrame {
 		btnAbrirDiret.addActionListener(abrirDir);
 
 		JLabel lblLertxt = new JLabel("Ler Arquivo .txt");
-		lblLertxt.setBounds(272, 63, 100, 14);
+		lblLertxt.setBounds(271, 39, 100, 14);
 		contentPane.add(lblLertxt);
 
 		JButton btnLertxt = new JButton("Procurar...");
-		btnLertxt.setBounds(272, 88, 100, 23);
+		btnLertxt.setBounds(271, 64, 100, 23);
 		contentPane.add(btnLertxt);
 
 		ActionListener buscatxt = new ActionListener() {
@@ -132,11 +133,11 @@ public class Principal extends JFrame {
 		btnLertxt.addActionListener(buscatxt);
 
 		JLabel lblCriartxt = new JLabel("Criar Arquivo .txt");
-		lblCriartxt.setBounds(402, 63, 100, 14);
+		lblCriartxt.setBounds(401, 39, 100, 14);
 		contentPane.add(lblCriartxt);
 
 		JButton btnCriartxt = new JButton("Criar...");
-		btnCriartxt.setBounds(402, 88, 100, 23);
+		btnCriartxt.setBounds(401, 64, 100, 23);
 		contentPane.add(btnCriartxt);
 
 		ActionListener criarTxt = new ActionListener() {
@@ -147,11 +148,13 @@ public class Principal extends JFrame {
 				Texto txt = new Texto();
 				CriarTxt frame2 = new CriarTxt(txt);
 				frame2.setVisible(true);
-				try {
-					arq.escreveArq(txt.getCaminho(), txt.getNome());
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				if (txt.getNome() != null && txt.getCaminho() != null) {
+					try {
+						arq.escreveArq(txt.getCaminho(), txt.getNome());
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
 			}
 		};
@@ -159,12 +162,12 @@ public class Principal extends JFrame {
 		btnCriartxt.addActionListener(criarTxt);
 
 		textFieldCaminho = new JTextField();
-		textFieldCaminho.setBounds(92, 136, 242, 20);
+		textFieldCaminho.setBounds(91, 112, 242, 20);
 		contentPane.add(textFieldCaminho);
 		textFieldCaminho.setColumns(10);
 
 		JLabel lblCaminho = new JLabel("Caminho:");
-		lblCaminho.setBounds(26, 139, 56, 14);
+		lblCaminho.setBounds(25, 115, 56, 14);
 		contentPane.add(lblCaminho);
 	}
 

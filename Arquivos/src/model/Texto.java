@@ -17,6 +17,10 @@ public class Texto {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+		
+		if (!nome.contains(".txt")) {
+			this.nome = nome+".txt";
+		}
 	}
 
 	public String getCaminho() {
