@@ -1,4 +1,6 @@
-/*Objetivo:     ...
+/*Objetivo:     Criar um programa que realize manipulacoes basicas de arquivos 
+				como abrir um arquivo, abrir um diretorio, ler e 
+				criar um arquivo de texto (.txt).
                 
 				Este codigo fonte sera salvo no arquivo Acoes.java
    Programador: Jonathan Willian Castro Pinheiro
@@ -13,7 +15,6 @@ import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import model.Texto;
 
 public class Acoes {
 

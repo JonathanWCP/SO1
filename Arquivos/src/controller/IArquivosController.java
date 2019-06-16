@@ -1,4 +1,6 @@
-/*Objetivo:     Interface da porra toda
+/*Objetivo:     Criar um programa que realize manipulacoes basicas de arquivos 
+				como abrir um arquivo, abrir um diretorio, ler e 
+				criar um arquivo de texto (.txt).
                 
 				Este codigo fonte sera salvo no arquivo IArquivosController.java
    Programador: Jonathan Willian Castro Pinheiro
